@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Results - Eduverse Academy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Shared Core Variables & Styles */
+        :root {
+            --brand-blue: #0b1c3c;
+            --brand-dark: #040d21;
+            --brand-orange: #f97316;
+            --light-bg: #f8fafc;
+            --card-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; }
+
+        /* Buttons */
+        .btn-navy {
+            background-color: var(--brand-blue);
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-navy:hover { background-color: var(--brand-dark); color: white; }
+        
+        .btn-orange {
+            background-color: var(--brand-orange);
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-orange:hover { background-color: #ea580c; color: white; }
+
+        /* Top Ribbon & Navbar */
+        .top-ribbon {
+            background-color: var(--brand-blue);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .social-anchors a { color: white; margin-left: 12px; transition: color 0.3s; }
+        .social-anchors a:hover { color: var(--brand-orange); }
+
+        .navbar-brand .logo-text-primary {
+            color: var(--brand-blue);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .navbar-brand .logo-text-secondary {
+            color: var(--brand-orange);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        .nav-link {
+            color: var(--brand-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--brand-orange); }
+
+        /* Section Titles */
+        .section-title {
+            color: var(--brand-blue);
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: var(--brand-orange);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        /* Banner Styling */
+        .results-banner-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 15px;
+            border-radius: var(--card-radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .results-banner {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Results Cards Grid */
+        .result-card-grid {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--card-radius);
+            padding: 30px 20px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .result-card-grid:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--brand-orange);
+        }
+        .result-card-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e2e8f0;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        .result-card-grid:hover .result-card-avatar {
+            border-color: var(--brand-orange);
+        }
+
+        /* Footer (Matched) */
+        .main-footer {
+            background-color: var(--brand-dark);
+            color: rgba(255,255,255,0.7);
+            border-top: 5px solid var(--brand-orange);
+            padding-top: 60px;
+            font-size: 0.9rem;
+        }
+        .footer-title { color: white; font-weight: 700; margin-bottom: 20px; }
+        .footer-links { list-style: none; padding-left: 0; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: rgba(255,255,255,0.7); transition: color 0.3s; }
+        .footer-links a:hover { color: var(--brand-orange); }
+        .copyright-bar { background-color: rgba(0,0,0,0.4); padding: 20px 0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- Shared Top Ribbon -->
+    <div class="top-ribbon d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div><i class="fa-solid fa-graduation-cap me-2 text-warning"></i> India's Leading Academy for NEET & JEE Preparation</div>
+            <div class="d-flex align-items-center">
+                <span class="me-4"><i class="fa-solid fa-phone me-2 text-warning"></i> +91 98765 43210</span>
+                <span class="me-4"><i class="fa-solid fa-envelope me-2 text-warning"></i> support@eduverse.com</span>
+                <div class="social-anchors">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shared Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3">
+                    <path d="M25 5L5 15L25 25L45 15L25 5Z" fill="#0b1c3c"/>
+                    <path d="M5 24V35C5 35 15 45 25 45C35 45 45 35 45 35V24L25 34L5 24Z" fill="#f97316"/>
+                </svg>
+                <div>
+                    <div class="logo-text-primary fs-4">EDUVERSE</div>
+                    <div class="logo-text-secondary">ACADEMY</div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <!-- Results is set to active here -->
+                    <li class="nav-item"><a class="nav-link active" href="/other-pages/result.html">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/other-pages/faculty.html">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-navy px-4">BOOK FREE DEMO</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Results Content Area -->
+    <main class="container my-5">
+        
+        <!-- User Provided Custom Banner -->
+        <div class="results-banner-container">
+            <!-- Using the exact path requested by the user -->
+            <img src="/contents/images/ChatGPT Image Jul 5, 2026, 11_17_02 AM.png" alt="Our Academic Achievements Banner" class="results-banner">
+        </div>
+
+        <div class="text-center mt-5 mb-4">
+            <h2 class="section-title">OUR PROUD ACHIEVERS</h2>
+            <p class="text-secondary fs-5">Celebrating the outstanding performances of our students in NEET & JEE.</p>
+        </div>
+
+        <!-- Student Results Grid -->
+        <div class="row g-4 mt-2">
+            
+            <!-- Result 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" class="result-card-avatar" alt="Student">
+                    <h5 class="fw-bold text-dark mb-1">Aarav Sharma</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 12</div>
+                    <span class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill fw-semibold w-100">720/720 (NEET)</span>
+                </div>
+            </div>
+
+            <!-- Result 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" class="result-card-avatar" alt="Student">
+                    <h5 class="fw-bold text-dark mb-1">Anjali Verma</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 53</div>
+                    <span class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill fw-semibold w-100">705/720 (NEET)</span>
+                </div>
+            </div>
+
+            <!-- Result 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" class="result-card-avatar" alt="Student">
+                    <h5 class="fw-bold text-dark mb-1">Rohit Singh</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 102</div>
+                    <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill fw-semibold w-100">JEE Advanced</span>
+                </div>
+            </div>
+
+            <!-- Result 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200" class="result-card-avatar" alt="Student">
+                    <h5 class="fw-bold text-dark mb-1">Meera Aggarwal</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 356</div>
+                    <span class="badge bg-warning bg-opacity-25 text-dark px-3 py-2 rounded-pill fw-semibold w-100">JEE Main (99.9%ile)</span>
+                </div>
+            </div>
+            
+            <!-- Result 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" class="result-card-avatar" alt="Student">
+                    <h5 class="fw-bold text-dark mb-1">Karan Patel</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 421</div>
+                    <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill fw-semibold w-100">JEE Advanced</span>
+                </div>
+            </div>
+
+            <!-- Result 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <!-- Generic Avatar Placeholder for variety -->
+                    <div class="result-card-avatar bg-light d-flex align-items-center justify-content-center mx-auto text-secondary">
+                        <i class="fa-solid fa-user fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-1">Priya Sharma</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 680</div>
+                    <span class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill fw-semibold w-100">685/720 (NEET)</span>
+                </div>
+            </div>
+
+            <!-- Result 7 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <div class="result-card-avatar bg-light d-flex align-items-center justify-content-center mx-auto text-secondary">
+                        <i class="fa-solid fa-user fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-1">Aditya Kumar</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 892</div>
+                    <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill fw-semibold w-100">JEE Advanced</span>
+                </div>
+            </div>
+
+            <!-- Result 8 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="result-card-grid">
+                    <div class="result-card-avatar bg-light d-flex align-items-center justify-content-center mx-auto text-secondary">
+                        <i class="fa-solid fa-user fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-1">Neha Gupta</h5>
+                    <div class="text-danger fw-bolder fs-3 mb-2">AIR 1104</div>
+                    <span class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill fw-semibold w-100">670/720 (NEET)</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="main-footer mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                            <path d="M25 5L5 15L25 25L45 15L25 5Z" fill="#ffffff"/>
+                            <path d="M5 24V35C5 35 15 45 25 45C35 45 45 35 45 35V24L25 34L5 24Z" fill="#f97316"/>
+                        </svg>
+                        <div>
+                            <div class="fs-5 fw-bold text-white lh-1">EDUVERSE</div>
+                            <div class="logo-text-secondary">ACADEMY</div>
+                        </div>
+                    </div>
+                    <p class="text-white-50 small mb-4">Empowering students with structured methodologies, elite faculty, and an environment dedicated to unlocking engineering and medical academic success.</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 px-lg-4">
+                    <h6 class="footer-title">QUICK LINKS</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Our Courses</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="faculty.html">Faculty Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">IMPORTANT LINKS</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-title">CONTACT DETAILS</h6>
+                    <ul class="footer-links text-white-50 small">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-warning"></i> 123 Education Street, New Delhi, 110001</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-warning"></i> +91 98765 43210</li>
+                        <li><i class="fa-solid fa-envelope me-2 text-warning"></i> support@eduverse.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar text-center">
+            <span class="text-white-50 small">&copy; 2026 Eduverse Academy. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

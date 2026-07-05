@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Faculty - Eduverse Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --brand-blue: #0b1c3c; --brand-dark: #040d21; --brand-orange: #f97316; --light-bg: #f8fafc; --card-radius: 12px; }
+        body { font-family: 'Inter', sans-serif; color: #334155; background-color: #ffffff; }
+        .btn-navy { background-color: var(--brand-blue); color: white; font-weight: 600; }
+        .btn-orange { background-color: var(--brand-orange); color: white; font-weight: 600; }
+        .top-ribbon { background-color: var(--brand-blue); color: rgba(255,255,255,0.9); font-size: 0.85rem; padding: 8px 0; }
+        .navbar-brand .logo-text-primary { color: var(--brand-blue); font-weight: 800; }
+        .navbar-brand .logo-text-secondary { color: var(--brand-orange); font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; }
+        .nav-link { color: var(--brand-blue); font-weight: 600; text-transform: uppercase; }
+        .nav-link:hover, .nav-link.active { color: var(--brand-orange); }
+        .main-footer { background-color: var(--brand-dark); color: rgba(255,255,255,0.7); border-top: 5px solid var(--brand-orange); padding-top: 60px; font-size: 0.9rem; }
+        .footer-title { color: white; font-weight: 700; margin-bottom: 20px; }
+        .footer-links { list-style: none; padding-left: 0; }
+        .footer-links a { color: rgba(255,255,255,0.7); }
+        .footer-links a:hover { color: var(--brand-orange); }
+        .copyright-bar { background-color: rgba(0,0,0,0.4); padding: 20px 0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="top-ribbon d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div><i class="fa-solid fa-graduation-cap me-2 text-warning"></i> India's Leading Academy for NEET & JEE Preparation</div>
+            <div class="d-flex align-items-center">
+                <span class="me-4"><i class="fa-solid fa-phone me-2 text-warning"></i> +91 98765 43210</span>
+                <div class="social-anchors ms-3"><a href="#" class="text-white"><i class="fa-brands fa-facebook-f"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3"><path d="M25 5L5 15L25 25L45 15L25 5Z" fill="#0b1c3c"/><path d="M5 24V35C5 35 15 45 25 45C35 45 45 35 45 35V24L25 34L5 24Z" fill="#f97316"/></svg>
+                <div><div class="logo-text-primary fs-4">EDUVERSE</div><div class="logo-text-secondary">ACADEMY</div></div>
+            </a>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/other-pages/result.html">Results</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faculty.html">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Faculty Banner -->
+    <div class="container-fluid p-0 mb-5">
+        <img src="/contents/images/ChatGPT Image Jul 5, 2026, 11_14_09 AM.png" class="img-fluid w-100" alt="Faculty Banner">
+    </div>
+
+    <div class="container my-5 text-center">
+        <h2>Our Expert Faculty</h2>
+        <p>Meet the team behind our success.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3"><h6 class="footer-title">EDUVERSE ACADEMY</h6><p class="small text-white-50">India's leading academy for competitive exams.</p></div>
+                <div class="col-lg-3"><h6 class="footer-title">QUICK LINKS</h6><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="faculty.html">Faculty</a></li></ul></div>
+            </div>
+        </div>
+        <div class="copyright-bar text-center"><span class="text-white-50 small">&copy; 2026 Eduverse Academy. All Rights Reserved.</span></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
